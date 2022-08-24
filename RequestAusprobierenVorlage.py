@@ -4,8 +4,8 @@ from datetime import datetime
 import requests
 
 # Lade Bild von https://www.dkriesel.com/_media/coronaplot-germany.png und speichere als coronaplot-germany.png
-r = requests.get("https://www.dkriesel.com/_media/coronaplot-germany.png")
-with open("coronaplot-germany.png", "wb") as f:
+r = requests.get("http://2.bp.blogspot.com/-WwEPfBy3P4k/U_vUKEVly1I/AAAAAAAAEbg/eUm2cfCv7Ys/s1600/nao-robot.jpg")
+with open("robo.png", "wb") as f:
     f.write(r.content)
 
 # Lade Informationen von der Tübinger Website.
@@ -19,13 +19,10 @@ b = requests.get("https://www.tuebingen.de/")
 # Füge den Link hier ein.
 c = requests.get("")
 
-# with open("JsonSeite.json", "wb") as d:
-#     d.write(b.content)
-
-with open("Stellencounter.json", "wb") as e:
+with open("Stellencounter.txt", "wb") as e:
     e.write(c.content)
 
-with open("Stellencounter.json", "r") as h:
+with open("Stellencounter.txt", "r") as h:
     fileData = h.read()
     jsonData = json.loads(fileData)
     print("Interne Stellenanzeigen: ", jsonData["intern"])

@@ -3,8 +3,11 @@ from datetime import datetime
 
 import requests
 
-# Lade Bild von https://www.dkriesel.com/_media/coronaplot-germany.png und speichere als coronaplot-germany.png
-r = requests.get("http://2.bp.blogspot.com/-WwEPfBy3P4k/U_vUKEVly1I/AAAAAAAAEbg/eUm2cfCv7Ys/s1600/nao-robot.jpg")
+# Lade Robo-Bild und speichere unter "robo.png".
+r = requests.get(
+    "http://2.bp.blogspot.com/-WwEPfBy3P4k/U_vUKEVly1I/AAAAAAAAEbg/eUm2cfCv7Ys/s1600/nao-robot.jpg"
+)
+
 with open("robo.png", "wb") as f:
     f.write(r.content)
 
@@ -17,7 +20,7 @@ b = requests.get("https://www.tuebingen.de/")
 # indem du mit dem Mauszeiger über bestimmten Code-Abschnitten schwebst.)
 
 # Füge den Link hier ein.
-c = requests.get("")
+c = requests.get("https://www.tuebingen.de/ws/stellencount")
 
 with open("Stellencounter.txt", "wb") as e:
     e.write(c.content)

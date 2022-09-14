@@ -1,1 +1,0 @@
-{"intern":19,"extern":31,"extern_festanstellung":18}

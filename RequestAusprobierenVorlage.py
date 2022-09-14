@@ -3,12 +3,12 @@ from datetime import datetime
 
 import requests
 
-# Lade Robo-Bild und speichere unter "robo.png".
+# Lade Bild und speichere unter "Bild.png".
 r = requests.get(
-    "http://2.bp.blogspot.com/-WwEPfBy3P4k/U_vUKEVly1I/AAAAAAAAEbg/eUm2cfCv7Ys/s1600/nao-robot.jpg"
+    "https://www.wildermuth-gymnasium.de/fileadmin/user_upload/Bilder/Geschichte/ottiliewildermuth.jpg"
 )
 
-with open("robo.png", "wb") as f:
+with open("Bild.png", "wb") as f:
     f.write(r.content)
 
 # Lade Informationen von der Tübinger Website.
